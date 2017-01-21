@@ -16,7 +16,6 @@ call vundle#begin()
     Plugin 'heavenshell/vim-jsdoc'
     Plugin 'scrooloose/nerdtree'
     Plugin 'itchyny/lightline.vim'
-    Plugin 'altercation/vim-colors-solarized'
     Plugin 'mtscout6/syntastic-local-eslint.vim'
     Plugin 'maksimr/vim-jsbeautify'
     Plugin 'maksimr/vim-yate'
@@ -30,4 +29,5 @@ source ~/.vim/vim-config/set.history.vim
 source ~/.vim/vim-config/set.other.vim
 source ~/.vim/vim-config/set.search.vim
 source ~/.vim/vim-config/set.statuline.vim
+source ~/.vim/vim-config/colors.vim
 source ~/.vim/vim-config/config.pluggins.vim
