@@ -1,23 +1,22 @@
 " Включение сторонних плагинов
 syntax on
 filetype plugin on
-set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
-    Plugin 'tpope/vim-fugitive'
+    Plugin 'tpope/vim-fugitive' " GIT
     Plugin 'L9'
-    Plugin 'git://git.wincent.com/command-t.git'
-    Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-    Plugin 'elzr/vim-json'
     Plugin 'pangloss/vim-javascript'
+    Plugin 'mxw/vim-jsx'
+    Plugin 'elzr/vim-json'
     Plugin 'heavenshell/vim-jsdoc'
     Plugin 'scrooloose/nerdtree'
-    Plugin 'itchyny/lightline.vim'
-    Plugin 'mtscout6/syntastic-local-eslint.vim'
-    Plugin 'maksimr/vim-jsbeautify'
+    Plugin 'mattn/emmet-vim'
+    Plugin 'bling/vim-airline'
+    Plugin 'mhartington/oceanic-next'
+
     Plugin 'maksimr/vim-yate'
 
 call vundle#end()
