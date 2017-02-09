@@ -16,6 +16,7 @@ call vundle#begin()
     Plugin 'mattn/emmet-vim'
     Plugin 'bling/vim-airline'
     Plugin 'mhartington/oceanic-next'
+    Plugin 'kien/ctrlp.vim'
 
     Plugin 'maksimr/vim-yate'
 
