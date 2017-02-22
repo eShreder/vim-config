@@ -1,2 +1,2 @@
-set dir=~/.vim/vim-config/swap
-set backupdir=~/.vim/vim-config/backup
+"set dir=~/.vim/vim-config/swap
+"set backupdir=~/.vim/vim-config/backup
