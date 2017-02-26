@@ -14,7 +14,7 @@ augroup END
 " => Nerd Tree
 
 let NERDTreeShowHidden=1
-let NERDTreeIgnore = ['\.pyc$', '__pycache__', '^\.git']
+let NERDTreeIgnore = ['\.pyc$', '__pycache__', '^\.git', '.swo$', '.swp$']
 
 map <C-n> :NERDTreeToggle<CR>
 
