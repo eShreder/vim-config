@@ -17,8 +17,7 @@ call vundle#begin()
     Plugin 'bling/vim-airline'
     Plugin 'mhartington/oceanic-next'
     Plugin 'kien/ctrlp.vim'
-
-    Plugin 'maksimr/vim-yate'
+    Plugin 'tpope/vim-surround'
 
 call vundle#end()
 filetype plugin indent on
