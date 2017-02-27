@@ -8,8 +8,11 @@ call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'tpope/vim-fugitive' " GIT
     Plugin 'L9'
+
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'
+    Plugin 'maxmellon/vim-jsx-pretty'
+
     Plugin 'elzr/vim-json'
     Plugin 'heavenshell/vim-jsdoc'
     Plugin 'scrooloose/nerdtree'
