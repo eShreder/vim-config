@@ -27,3 +27,4 @@ set showcmd
 set wildmenu
 " Настройка отображения специальных символов
 set list listchars=tab:→\ ,trail:·
+

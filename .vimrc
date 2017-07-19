@@ -21,6 +21,12 @@ call vundle#begin()
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
 
+    Plugin 'digitaltoad/vim-jade'
+
+    Plugin 'scrooloose/syntastic'
+    Plugin 'mtscout6/syntastic-local-eslint.vim'
+
+
 call vundle#end()
 filetype plugin indent on
 
