@@ -48,6 +48,9 @@ set conceallevel=1
 
 let g:airline#extensions#tabline#enabled = 1
 
+" => eslint
 
 let g:syntastic_javascript_checkers=['eslint']
-let g:syntastic_javascript_eslint_exe='$(npm bin)/eslint'
+let g:syntastic_javascript_eslint_exec='eslint_d'
+" Autofix visual selection with eslint_d:
+vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv

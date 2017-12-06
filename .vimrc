@@ -11,25 +11,22 @@ call vundle#begin()
 
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'
+    Plugin 'digitaltoad/vim-jade'
 
     Plugin 'elzr/vim-json'
-    Plugin 'heavenshell/vim-jsdoc'
     Plugin 'scrooloose/nerdtree'
-    Plugin 'mattn/emmet-vim'
     Plugin 'bling/vim-airline'
     Plugin 'mhartington/oceanic-next'
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
 
-    Plugin 'digitaltoad/vim-jade'
-
     Plugin 'scrooloose/syntastic'
-    Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 
 call vundle#end()
 filetype plugin indent on
 
+source ~/.vim/vim-config/functions/sorts.vim
 source ~/.vim/vim-config/set.backup.vim
 source ~/.vim/vim-config/set.edit.vim
 source ~/.vim/vim-config/set.history.vim

@@ -1,6 +1,6 @@
 set termencoding=utf8
 set number
-"set cursorline
+set cursorline
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
