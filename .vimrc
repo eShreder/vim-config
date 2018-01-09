@@ -13,6 +13,7 @@ call vundle#begin()
     Plugin 'mxw/vim-jsx'
     Plugin 'digitaltoad/vim-jade'
 
+    Plugin 'mattn/emmet-vim'
     Plugin 'elzr/vim-json'
     Plugin 'scrooloose/nerdtree'
     Plugin 'bling/vim-airline'
