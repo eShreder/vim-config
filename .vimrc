@@ -21,6 +21,7 @@ call vundle#begin()
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
 
+    Plugin 'flowtype/vim-flow'
     Plugin 'scrooloose/syntastic'
 
 
