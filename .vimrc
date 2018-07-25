@@ -23,7 +23,7 @@ call vundle#begin()
 
     Plugin 'flowtype/vim-flow'
     Plugin 'scrooloose/syntastic'
-
+    Plugin 'prettier/vim-prettier'
 
 call vundle#end()
 filetype plugin indent on
