@@ -1,6 +1,7 @@
 " => vim-json
 
 let g:vim_json_syntax_conceal = 0
+
 au! BufRead,BufNewFile *.json set filetype=json
 augroup json_autocmd
     autocmd!
@@ -47,6 +48,9 @@ let g:javascript_plugin_jsdoc = 1
 set conceallevel=1
 
 let g:airline#extensions#tabline#enabled = 1
+
+" => TS
+let g:typescript_indent_disable = 1
 
 " => eslint
 

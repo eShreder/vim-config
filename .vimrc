@@ -21,7 +21,7 @@ call vundle#begin()
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
 
-    Plugin 'flowtype/vim-flow'
+    Plugin 'leafgarland/typescript-vim'
     Plugin 'scrooloose/syntastic'
     Plugin 'prettier/vim-prettier'
 
@@ -29,6 +29,8 @@ call vundle#end()
 filetype plugin indent on
 
 source ~/.vim/vim-config/functions/sorts.vim
+source ~/.vim/vim-config/functions/grep.vim
+source ~/.vim/vim-config/functions/split.vim
 source ~/.vim/vim-config/set.backup.vim
 source ~/.vim/vim-config/set.edit.vim
 source ~/.vim/vim-config/set.history.vim

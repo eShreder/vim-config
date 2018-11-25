@@ -4,7 +4,8 @@ set expandtab
 
 set shiftwidth=4
 set tabstop=4
-set clipboard=unnamed
+" set clipboard=unnamed
+" set clipboard=unnamedplus
 set smartindent
 set showmatch
 
