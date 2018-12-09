@@ -23,7 +23,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 " => Emmit
 
-let g:user_emmet_expandabbr_key='<C-l>'
+let g:user_emmet_expandabbr_key='<C-Y>'
 
 " => oceanic-next
 
@@ -56,5 +56,7 @@ let g:typescript_indent_disable = 1
 
 let g:syntastic_javascript_checkers=['eslint']
 let g:syntastic_javascript_eslint_exec='eslint_d'
+"
 " Autofix visual selection with eslint_d:
-vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>gv
+vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>
+

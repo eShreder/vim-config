@@ -11,7 +11,6 @@ call vundle#begin()
 
     Plugin 'pangloss/vim-javascript'
     Plugin 'mxw/vim-jsx'
-    Plugin 'digitaltoad/vim-jade'
 
     Plugin 'mattn/emmet-vim'
     Plugin 'elzr/vim-json'
