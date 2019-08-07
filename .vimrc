@@ -20,9 +20,11 @@ call vundle#begin()
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
 
-    Plugin 'leafgarland/typescript-vim'
     Plugin 'scrooloose/syntastic'
     Plugin 'prettier/vim-prettier'
+
+    Plugin 'leafgarland/typescript-vim'
+    Plugin 'quramy/tsuquyomi'
 
 call vundle#end()
 filetype plugin indent on
