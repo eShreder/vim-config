@@ -15,7 +15,6 @@ call vundle#begin()
     Plugin 'mattn/emmet-vim'
     Plugin 'elzr/vim-json'
     Plugin 'scrooloose/nerdtree'
-    Plugin 'bling/vim-airline'
     Plugin 'mhartington/oceanic-next'
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
@@ -37,6 +36,6 @@ source ~/.vim/vim-config/set.edit.vim
 source ~/.vim/vim-config/set.history.vim
 source ~/.vim/vim-config/set.other.vim
 source ~/.vim/vim-config/set.search.vim
-source ~/.vim/vim-config/set.statuline.vim
 source ~/.vim/vim-config/colors.vim
 source ~/.vim/vim-config/config.pluggins.vim
+source ~/.vim/vim-config/set.statuline.vim

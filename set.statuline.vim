@@ -1,3 +1,15 @@
-let g:airline#extensions#tabline#enabled = 1
+" left
+" filename
+set statusline=%F
+" modify status
+set statusline+=%m
 
-set statusline=%F\ %y%m%r[]%<[%{strftime(\"%d.%m.%y\",getftime(expand(\"%:p\")))}]%k%=%-14.(%l,%c%V%)\ %P
+" rigth
+set statusline+=%=
+set statusline+=%#CursorColumn#
+set statusline+=\[%{&fileformat}\]
+set statusline+=\ %l:%c
+
+
+
+
