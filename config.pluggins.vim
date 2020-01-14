@@ -60,3 +60,5 @@ let g:syntastic_javascript_eslint_exec='eslint_d'
 " Autofix visual selection with eslint_d:
 vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>
 
+" ALE
+let g:ale_completion_enabled = 1

@@ -9,21 +9,14 @@ call vundle#begin()
     Plugin 'tpope/vim-fugitive' " GIT
     Plugin 'L9'
 
-    Plugin 'pangloss/vim-javascript'
-    Plugin 'mxw/vim-jsx'
-
     Plugin 'mattn/emmet-vim'
-    Plugin 'elzr/vim-json'
     Plugin 'scrooloose/nerdtree'
     Plugin 'mhartington/oceanic-next'
     Plugin 'kien/ctrlp.vim'
     Plugin 'tpope/vim-surround'
+    Plugin 'ianks/vim-tsx'
 
-    Plugin 'scrooloose/syntastic'
-    Plugin 'prettier/vim-prettier'
-
-    Plugin 'leafgarland/typescript-vim'
-    Plugin 'quramy/tsuquyomi'
+    Plugin 'w0rp/ale'
 
 call vundle#end()
 filetype plugin indent on
