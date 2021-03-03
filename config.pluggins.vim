@@ -62,3 +62,10 @@ vnoremap <leader>f :!eslint_d --stdin --fix-to-stdout<CR>
 
 " ALE
 let g:ale_completion_enabled = 1
+nmap <C-F> :ALEGoToDefinition<CR>
+nmap <C-T> :ALEGoToTypeDefinition<CR>
+
+call add(g:go_to_file_maps_str, ["^@yandex-turbo/", "~/projects/turbo/"])
+call add(g:go_to_file_maps_str, ["^@/", "../"])
+
+

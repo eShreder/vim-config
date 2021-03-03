@@ -4,6 +4,8 @@ filetype plugin on
 filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.vim/bundle/vim-yawiki
+
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'tpope/vim-fugitive' " GIT
@@ -21,6 +23,7 @@ call vundle#begin()
 call vundle#end()
 filetype plugin indent on
 
+source ~/.vim/vim-config/functions/go-to-file.vim
 source ~/.vim/vim-config/functions/sorts.vim
 source ~/.vim/vim-config/functions/grep.vim
 source ~/.vim/vim-config/functions/split.vim
