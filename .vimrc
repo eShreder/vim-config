@@ -15,6 +15,8 @@ call vundle#begin()
     Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plugin 'junegunn/fzf.vim'
 
+    Plugin 'metakirby5/codi.vim'
+
 "    Plugin 'gmarik/Vundle.vim'
 "    Plugin 'tpope/vim-fugitive' " GIT
 "    Plugin 'L9'
