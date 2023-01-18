@@ -40,10 +40,10 @@ vim.opt.undofile = true
 vim.opt.updatetime = 200
 vim.opt.wildmode = "longest:full,full"
 
--- vim.opt.foldmethod = "indent"
--- vim.opt.foldlevelstart = 20
--- vim.opt.foldlevel = 20
--- vim.opt.fillchars = { fold = "⏤" }
+vim.opt.foldmethod = "indent"
+vim.opt.foldlevelstart = 20
+vim.opt.foldlevel = 20
+vim.opt.fillchars = { fold = "⏤" }
 
 vim.g.mapleader = "\\"
 vim.g.maplocalleader = ","

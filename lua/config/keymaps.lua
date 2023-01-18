@@ -13,10 +13,10 @@ keymap("n", "g;", "g;zvzz")
 -- Better escape using jk in insert and terminal mode
 keymap("i", "jk", "<ESC>")
 keymap("t", "jk", "<C-\\><C-n>")
-keymap("t", "<C-h>", "<C-\\><C-n><C-w>h")
-keymap("t", "<C-j>", "<C-\\><C-n><C-w>j")
-keymap("t", "<C-k>", "<C-\\><C-n><C-w>k")
-keymap("t", "<C-l>", "<C-\\><C-n><C-w>l")
+--keymap("t", "<C-h>", "<C-\\><C-n><C-w>h")
+--keymap("t", "<C-j>", "<C-\\><C-n><C-w>j")
+--keymap("t", "<C-k>", "<C-\\><C-n><C-w>k")
+--keymap("t", "<C-l>", "<C-\\><C-n><C-w>l")
 
 -- Add undo break-points
 keymap("i", ",", ",<c-g>u")
@@ -43,3 +43,10 @@ keymap("n", "<S-Up>", "<cmd>resize +2<CR>")
 keymap("n", "<S-Down>", "<cmd>resize -2<CR>")
 keymap("n", "<S-Left>", "<cmd>vertical resize -2<CR>")
 keymap("n", "<S-Right>", "<cmd>vertical resize +2<CR>")
+
+-- Split window
+local k = { "h", "j", "k", "l" }
+for i = 1, 4 do
+	local action = k[i]
+	keymap("n", "<C-" .. action .. ">", ':lua require("utils/split").call("' .. action .. '")<cr>', {})
+end

@@ -1,3 +1,9 @@
+# lock
+lazy-lock.json
+
+# spell files
+spell
+
 # Compiled Lua sources
 luac.out
 
