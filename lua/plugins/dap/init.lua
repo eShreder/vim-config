@@ -1,4 +1,4 @@
-local M = {
+return {
 	"mfussenegger/nvim-dap",
 	dependencies = {
 		{
@@ -10,5 +10,3 @@ local M = {
 		{ "jbyuki/one-small-step-for-vimkind" },
 	},
 }
-
-return M
