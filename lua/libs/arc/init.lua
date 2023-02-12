@@ -1,4 +1,4 @@
--- check avaliable arc on sh
+-- check available arc on sh
 local function has_command()
     local has = io.popen("command -v arc"):read()
     return has and true or false
