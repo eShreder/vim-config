@@ -14,4 +14,3 @@ return {
     has = has_command,
     branch = get_branch,
 }
-

@@ -1,10 +1,8 @@
-local icons = require("config.icons")
-
 return {
     spaces = {
         function()
             local shiftwidth = vim.api.nvim_buf_get_option(0, "shiftwidth")
-            return icons.ui.Tab .. " " .. shiftwidth
+            return shiftwidth
         end,
         padding = 1,
     },
@@ -87,9 +85,8 @@ return {
                 end
             end
             table.sort(client_names)
-            return icons.ui.Code .. " " .. table.concat(client_names, ", ") .. " " .. icons.ui.Code
+            return table.concat(client_names, ", ")
         end,
-        -- icon = icons.ui.Code,
         colored = true,
         on_click = function()
             vim.cmd([[LspInfo]])

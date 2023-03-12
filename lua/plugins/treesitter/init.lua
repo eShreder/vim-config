@@ -34,7 +34,6 @@ return {
                     "python",
                     "query",
                     "regex",
-                    "rust",
                     "tsx",
                     "typescript",
                     "vim",
@@ -54,9 +53,8 @@ return {
                 textobjects = {
                     select = {
                         enable = true,
-                        lookahead = true, -- Automatically jump forward to textobj, similar to targets.vim
+                        lookahead = true,
                         keymaps = {
-                            -- You can use the capture groups defined in textobjects.scm
                             ["aa"] = "@parameter.outer",
                             ["ia"] = "@parameter.inner",
                             ["af"] = "@function.outer",
@@ -67,7 +65,7 @@ return {
                     },
                     move = {
                         enable = true,
-                        set_jumps = true, -- whether to set jumps in the jumplist
+                        set_jumps = true,
                         goto_next_start = {
                             ["]m"] = "@function.outer",
                             ["]]"] = "@class.outer",

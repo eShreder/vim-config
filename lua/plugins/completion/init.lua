@@ -7,7 +7,6 @@ return {
             "saadparwaiz1/cmp_luasnip",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
-            "hrsh7th/cmp-cmdline",
         },
         config = function()
             local cmp = require("cmp")
@@ -33,10 +32,10 @@ return {
                     ["<C-f>"] = cmp.mapping.scroll_docs(4),
                     ["<C-Space>"] = cmp.mapping.complete({}),
                     ["<C-e>"] = cmp.mapping.abort(),
-                    ["<Right>"] = cmp.mapping.confirm({ select = true }),
+                    ["<Tab>"] = cmp.mapping.confirm({ select = true }),
                     ["<C-j>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_next_item()
+                        if cmp.visible() then
+                            cmp.select_next_item()
                         elseif luasnip.expand_or_jumpable() then
                             luasnip.expand_or_jump()
                         elseif has_words_before() then
@@ -44,24 +43,16 @@ return {
                         else
                             fallback()
                         end
-                        end, {
-                            "i",
-                            "s",
-                            "c",
-                    }),
+                    end, { "i", "s", "c" }),
                     ["<C-k>"] = cmp.mapping(function(fallback)
-                    if cmp.visible() then
-                        cmp.select_prev_item()
+                        if cmp.visible() then
+                            cmp.select_prev_item()
                         elseif luasnip.jumpable(-1) then
                             luasnip.jump(-1)
                         else
                             fallback()
                         end
-                        end, {
-                            "i",
-                            "s",
-                            "c",
-                    }),
+                    end, { "i", "s", "c" }),
                 }),
                 sources = cmp.config.sources({
                     { name = "nvim_lsp_signature_help" },
@@ -81,13 +72,13 @@ return {
                         }
                         item.menu = source_names[entry.source.name]
                         return item
-end,
+                    end,
                 },
             })
         end,
     },
     {
-"L3MON4D3/LuaSnip",
+        "L3MON4D3/LuaSnip",
         dependencies = {
             "rafamadriz/friendly-snippets",
             config = function()

@@ -3,10 +3,6 @@ return {
         "neovim/nvim-lspconfig",
         event = "BufReadPre",
         dependencies = {
-            { "folke/neoconf.nvim", cmd = "Neoconf", config = true },
-            { "folke/neodev.nvim", config = true },
-            { "j-hui/fidget.nvim", config = true },
-            { "smjonas/inc-rename.nvim", config = true },
             "williamboman/mason.nvim",
             "williamboman/mason-lspconfig.nvim",
             "hrsh7th/cmp-nvim-lsp",
@@ -55,7 +51,6 @@ return {
         dependencies = {
             "neovim/nvim-lspconfig",
             "SmiteshP/nvim-navic",
-            "nvim-tree/nvim-web-devicons",
         },
         config = true,
     },
