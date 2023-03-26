@@ -21,6 +21,7 @@ opt.number = true
 opt.wrap = true
 opt.list = true
 opt.breakindent = true
+opt.relativenumber = true
 
 -- folding
 opt.foldmethod = "indent"

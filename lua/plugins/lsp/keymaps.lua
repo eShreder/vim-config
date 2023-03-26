@@ -1,5 +1,13 @@
 local M = {}
 
+function with_options(cmd)
+    return function()
+        cmd({
+            symbol_width = 50,
+        })
+    end
+end
+
 function M.on_attach(client, buffer)
     local self = M.new(client, buffer)
 
@@ -23,8 +31,7 @@ function M.on_attach(client, buffer)
     self:map("<leader>cf", format, { desc = "Format Range", mode = "v", has = "documentRangeFormatting" })
     self:map("<leader>cr", M.rename, { expr = true, desc = "Rename", has = "rename" })
 
-    self:map("<leader>cs", require("telescope.builtin").lsp_document_symbols, { desc = "Document Symbols" })
-    self:map("<leader>cS", require("telescope.builtin").lsp_dynamic_workspace_symbols, { desc = "Workspace Symbols" })
+    self:map("<leader>cs", with_options(require("telescope.builtin").lsp_document_symbols), { desc = "Document Symbols" })
 end
 
 function M.new(client, buffer)
