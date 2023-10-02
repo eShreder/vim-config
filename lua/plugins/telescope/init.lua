@@ -15,9 +15,11 @@ local plugins = {
             { "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
             { "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent" },
             { "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffers" },
-            { "<leader>fg", "<cmd>Telescope git_files<cr>", desc = "Git Files" },
             { "<leader>f/", "<cmd>Telescope live_grep<cr>", desc = "Grep" },
             { "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },
+
+            { "<leader>fgf", "<cmd>Telescope git_files<cr>", desc = "Git Files" },
+            { "<leader>fgs", "<cmd>Telescope git_status<cr>", desc = "Git status" },
         },
         config = function()
             --local actions = require("telescope.actions")
