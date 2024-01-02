@@ -1,4 +1,4 @@
-return {{
+return { {
   "ellisonleao/gruvbox.nvim",
   lazy = false,
   config = function()
@@ -9,10 +9,5 @@ return {{
     })
     vim.cmd("colorscheme gruvbox")
   end
-}, {
-  "ayu-theme/ayu-vim",
-  lazy = false,
-  config = function()
-    vim.cmd("colorscheme ayu")
-  end
-}}
+},
+}

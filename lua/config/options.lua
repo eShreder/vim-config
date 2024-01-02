@@ -36,7 +36,7 @@ vim.o.formatoptions = "jcroqlnt"
 vim.o.shortmess = "filnxtToOFWIcC"
 opt.cmdheight = 1
 
-opt.conceallevel = 3
+-- opt.conceallevel = 3
 
 opt.hidden = true
 opt.hlsearch = false

@@ -14,18 +14,18 @@ local servers = {
         },
     },
     lua_ls = {
-        settings = {
-            Lua = {
-                workspace = {
-                    checkThirdParty = false,
-                },
-                completion = { callSnippet = "Replace" },
-                telemetry = { enable = false },
-                hint = {
-                    enable = false,
-                },
-            },
-        },
+        -- settings = {
+        --     Lua = {
+        --         workspace = {
+        --             checkThirdParty = false,
+        --         },
+        --         completion = { callSnippet = "Replace" },
+        --         telemetry = { enable = false },
+        --         hint = {
+        --             enable = false,
+        --         },
+        --     },
+        -- },
     },
     tsserver = {
         disable_formatting = false,
