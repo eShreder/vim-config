@@ -1,5 +1,5 @@
 local opt = vim.opt
-local indent = 4
+local indent = 2
 -- undofile
 opt.undofile = true
 opt.undolevels = 1000
