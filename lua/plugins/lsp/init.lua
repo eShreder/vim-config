@@ -42,7 +42,11 @@ return {
                 sources = {
                     nls.builtins.formatting.stylua,
                     nls.builtins.diagnostics.ruff.with({ extra_args = { "--max-line-length=180" } }),
+                    nls.builtins.formatting.prettier,
                 },
+                on_attach = function(client, bufnr)
+                  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>F', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true, desc = "Format" })
+                end,
             })
         end,
     },
