@@ -1,18 +1,17 @@
 local wk = require("which-key")
 local default_opts = { noremap = true, silent = true }
 
-wk.register({
+wk.add({
     -- set current path by current file
-    c = {
-        name = "Actions",
-        ["d"] = { ":cd %:p:h<cr>:pwd<cr>", "set current dir" },
-    },
+    { "<leader>c", group = "Actions" },
+    { "<leader>cd", ":cd %:p:h<cr>:pwd<cr>", desc = "set current dir" },
+})
+
     -- toggle spell-checker
-    t = {
-        name = "Toggles",
-        ["="] = { "<cmd>setlocal spell! spelllang=en_us,ru_ru<cr>", "Toggle spell-checker" },
-    }
-}, { prefix = "<leader>" })
+    -- t = {
+    --     name = "Toggles",
+    --     ["="] = { "<cmd>setlocal spell! spelllang=en_us,ru_ru<cr>", "Toggle spell-checker" },
+    -- }
 
 -- goto buffers and tabs
 vim.api.nvim_set_keymap("n", "<S-Right>", ":bprevious<CR>", default_opts)

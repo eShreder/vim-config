@@ -6,8 +6,6 @@ return {
         wk.setup({
             show_help = false,
             plugins = { spelling = true },
-            key_labels = { ["<leader>"] = "\\" },
-            triggers = "auto",
         })
     end,
 }
