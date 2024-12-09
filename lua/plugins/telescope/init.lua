@@ -19,6 +19,8 @@ local plugins = {
             { "<leader>f/",      "<cmd>Telescope live_grep<cr>",  desc = "Grep" },
             { "<leader>fh",      "<cmd>Telescope help_tags<cr>",  desc = "Help" },
 
+            { "<leader>fg", desc = "Git" },
+            { "<leader>fgb",     "<cmd>Telescope git_branches<cr>", desc = "Git Branches" },
             { "<leader>fgf",     "<cmd>Telescope git_files<cr>",  desc = "Git Files" },
             { "<leader>fgs",     "<cmd>Telescope git_status<cr>", desc = "Git status" },
         },

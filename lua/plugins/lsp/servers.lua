@@ -27,9 +27,9 @@ local servers = {
         --     },
         -- },
     },
-    -- tsserver = {
-    --     disable_formatting = false,
-    -- },
+    ts_ls = {
+        disable_formatting = false,
+    },
     dockerls = {},
 }
 
