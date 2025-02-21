@@ -17,9 +17,9 @@ return {
         cmd = "Mason",
         keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
         ensure_installed = {
-            "stylua",
-            "ruff",
-            "prettier"
+            -- "stylua",
+            -- "ruff",
+            -- "prettier"
         },
         config = function(plugin)
             require("mason").setup()

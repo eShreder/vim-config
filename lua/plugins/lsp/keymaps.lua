@@ -11,11 +11,11 @@ end
 function M.on_attach(client, buffer)
     local self = M.new(client, buffer)
 
-    self:map("gd", "Telescope lsp_definitions", { desc = "Goto Definition" })
-    self:map("gr", "Telescope lsp_references", { desc = "References" })
-    self:map("gD", "Telescope lsp_declarations", { desc = "Goto Declaration" })
-    self:map("gI", "Telescope lsp_implementations", { desc = "Goto Implementation" })
-    self:map("gb", "Telescope lsp_type_definitions", { desc = "Goto Type Definition" })
+    self:map("gd", "FzfLua lsp_definitions", { desc = "Goto Definition" })
+    self:map("gr", "FzfLua lsp_references", { desc = "References" })
+    self:map("gD", "FzfLua lsp_declarations", { desc = "Goto Declaration" })
+    self:map("gI", "FzfLua lsp_implementations", { desc = "Goto Implementation" })
+    self:map("gb", "FzfLua lsp_type_definitions", { desc = "Goto Type Definition" })
     self:map("K", vim.lsp.buf.hover, { desc = "Hover" })
     self:map("gK", vim.lsp.buf.signature_help, { desc = "Signature Help", has = "signatureHelp" })
     self:map("[d", M.diagnostic_goto(true), { desc = "Next Diagnostic" })
@@ -31,7 +31,7 @@ function M.on_attach(client, buffer)
     self:map("<leader>cf", format, { desc = "Format Range", mode = "v", has = "documentRangeFormatting" })
     self:map("<leader>cr", M.rename, { expr = true, desc = "Rename", has = "rename" })
 
-    self:map("<leader>cs", with_options(require("telescope.builtin").lsp_document_symbols), { desc = "Document Symbols" })
+    self:map("<leader>cs", "FzfLua lsp_document_symbols", { desc = "Document Symbols" })
 end
 
 function M.new(client, buffer)
