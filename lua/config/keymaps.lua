@@ -5,6 +5,9 @@ wk.add({
     -- set current path by current file
     { "<leader>c", group = "Actions" },
     { "<leader>cd", ":cd %:p:h<cr>:pwd<cr>", desc = "set current dir" },
+    { "<leader>cf", function() require("plugins.lsp.format").toggle() end, desc = "toggle format on save" },
+    { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "copilot panel" },
+    { "<leader>ct", "<cmd>Copilot toggle<cr>", desc = "toggle copilot" },
 })
 
     -- toggle spell-checker
@@ -14,8 +17,8 @@ wk.add({
     -- }
 
 -- goto buffers and tabs
-vim.api.nvim_set_keymap("n", "<S-Right>", ":bprevious<CR>", default_opts)
-vim.api.nvim_set_keymap("n", "<S-Left>", ":bnext<CR>", default_opts)
+vim.api.nvim_set_keymap("n", "<S-Right>", ":bnext<CR>", default_opts)
+vim.api.nvim_set_keymap("n", "<S-Left>", ":bprevious<CR>", default_opts)
 vim.api.nvim_set_keymap("n", "<S-Down>", ":tabprevious<CR>", default_opts)
 vim.api.nvim_set_keymap("n", "<S-Up>", ":tabNext<CR>", default_opts)
 

@@ -14,18 +14,18 @@ local servers = {
         },
     },
     lua_ls = {
-        -- settings = {
-        --     Lua = {
-        --         workspace = {
-        --             checkThirdParty = false,
-        --         },
-        --         completion = { callSnippet = "Replace" },
-        --         telemetry = { enable = false },
-        --         hint = {
-        --             enable = false,
-        --         },
-        --     },
-        -- },
+        settings = {
+            Lua = {
+                workspace = {
+                    checkThirdParty = false,
+                },
+                completion = { callSnippet = "Replace" },
+                telemetry = { enable = false },
+                hint = {
+                    enable = false,
+                },
+            },
+        },
     },
     ts_ls = {
         disable_formatting = false,
@@ -54,14 +54,17 @@ function M.setup(_)
         require("plugins.lsp.keymaps").on_attach(client, buffer)
     end)
 
-    require("mason-lspconfig").setup({ ensure_installed = vim.tbl_keys(servers) })
-    require("mason-lspconfig").setup_handlers({
-        function(server)
-            local opts = servers[server] or {}
-            opts.capabilities = lsp_capabilities()
-            require("lspconfig")[server].setup(opts)
-        end,
-    })
+    -- Setup each server individually to avoid mason-lspconfig issues
+    local lspconfig = require("lspconfig")
+    local capabilities = lsp_capabilities()
+    
+    for server_name, server_config in pairs(servers) do
+        local opts = vim.tbl_deep_extend("force", {
+            capabilities = capabilities,
+        }, server_config)
+        
+        lspconfig[server_name].setup(opts)
+    end
 end
 
 return M

@@ -1,7 +1,7 @@
 return {
     {
         "nvim-lualine/lualine.nvim",
-        event = "VeryLazy",
+        event = "UIEnter",
 
         config = function()
             local components = require("plugins.statusline.components")

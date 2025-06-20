@@ -55,6 +55,7 @@ return {
                     end, { "i", "s", "c" }),
                 }),
                 sources = cmp.config.sources({
+                    { name = "copilot", group_index = 2 },
                     { name = "nvim_lsp_signature_help" },
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
@@ -65,6 +66,7 @@ return {
                     fields = { "kind", "abbr", "menu" },
                     format = function(entry, item)
                         local source_names = {
+                            copilot = "(Copilot)",
                             nvim_lsp = "(LSP)",
                             path = "(Path)",
                             luasnip = "(Snippet)",
