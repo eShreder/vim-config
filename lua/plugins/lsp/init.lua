@@ -18,7 +18,7 @@ return {
         keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
         ensure_installed = {
             "stylua",
-            "ruff",
+            -- "ruff",
             "prettier"
         },
         config = function(plugin)
@@ -33,19 +33,19 @@ return {
         end,
     },
     {
-        "jose-elias-alvarez/null-ls.nvim",
+        "nvimtools/none-ls.nvim",
         event = "BufReadPre",
         dependencies = { "mason.nvim" },
         config = function()
-            local nls = require("null-ls")
-            nls.setup({
+            local null_ls = require("null-ls")
+            null_ls.setup({
                 sources = {
-                    nls.builtins.formatting.stylua,
-                    nls.builtins.diagnostics.ruff.with({ extra_args = { "--max-line-length=180" } }),
-                    nls.builtins.formatting.prettier,
+                    null_ls.builtins.formatting.stylua,
+                    -- null_ls.builtins.diagnostics.ruff.with({ extra_args = { "--max-line-length=180" } }),
+                    null_ls.builtins.formatting.prettier,
                 },
                 on_attach = function(client, bufnr)
-                  vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>F', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true, desc = "Format" })
+                    vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>F', '<cmd>lua vim.lsp.buf.format({ async = true })<CR>', { noremap = true, silent = true, desc = "Format" })
                 end,
             })
         end,

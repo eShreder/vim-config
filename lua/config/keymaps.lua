@@ -6,8 +6,8 @@ wk.add({
     { "<leader>c", group = "Actions" },
     { "<leader>cd", ":cd %:p:h<cr>:pwd<cr>", desc = "set current dir" },
     { "<leader>cf", function() require("plugins.lsp.format").toggle() end, desc = "toggle format on save" },
-    { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "copilot panel" },
-    { "<leader>ct", "<cmd>Copilot toggle<cr>", desc = "toggle copilot" },
+    -- { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "copilot panel" },
+    -- { "<leader>ct", "<cmd>Copilot toggle<cr>", desc = "toggle copilot" },
 })
 
     -- toggle spell-checker
