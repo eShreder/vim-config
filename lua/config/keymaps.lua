@@ -6,6 +6,14 @@ wk.add({
     { "<leader>c", group = "Actions" },
     { "<leader>cd", ":cd %:p:h<cr>:pwd<cr>", desc = "set current dir" },
     { "<leader>cf", function() require("plugins.lsp.format").toggle() end, desc = "toggle format on save" },
+    { "<leader>cw", function()
+        for _, win in ipairs(vim.api.nvim_list_wins()) do
+            local config = vim.api.nvim_win_get_config(win)
+            if config.relative ~= "" then
+                vim.api.nvim_win_close(win, false)
+            end
+        end
+    end, desc = "close all floating windows" },
     -- { "<leader>cp", "<cmd>Copilot panel<cr>", desc = "copilot panel" },
     -- { "<leader>ct", "<cmd>Copilot toggle<cr>", desc = "toggle copilot" },
 })

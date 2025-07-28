@@ -30,7 +30,6 @@ local servers = {
 	ts_ls = {
 		disable_formatting = false,
 	},
-	eslint_d = {},
 	dockerls = {},
 }
 

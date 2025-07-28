@@ -55,18 +55,31 @@ return {
                     end, { "i", "s", "c" }),
                 }),
                 sources = cmp.config.sources({
-                    { name = "copilot", group_index = 2 },
                     { name = "nvim_lsp_signature_help" },
                     { name = "nvim_lsp" },
                     { name = "luasnip" },
-                    { name = "buffer" },
+                    { 
+                        name = "buffer",
+                        option = {
+                            get_bufnrs = function()
+                                local bufs = {}
+                                for _, buf in ipairs(vim.api.nvim_list_bufs()) do
+                                    if vim.api.nvim_buf_is_loaded(buf) and vim.bo[buf].buflisted then
+                                        table.insert(bufs, buf)
+                                    end
+                                end
+                                return bufs
+                            end,
+                            keyword_length = 2,
+                        },
+                        max_item_count = 10,
+                    },
                     { name = "path" },
                 }),
                 formatting = {
                     fields = { "kind", "abbr", "menu" },
                     format = function(entry, item)
                         local source_names = {
-                            copilot = "(Copilot)",
                             nvim_lsp = "(LSP)",
                             path = "(Path)",
                             luasnip = "(Snippet)",
