@@ -29,6 +29,9 @@ opt.foldlevelstart = 20
 opt.foldlevel = 20
 opt.fillchars = { fold = "-" }
 
+-- clipboard
+opt.clipboard = "unnamedplus"
+
 -- other
 opt.scrolloff = 7
 opt.incsearch = true

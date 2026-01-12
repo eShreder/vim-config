@@ -27,9 +27,7 @@ local servers = {
 			},
 		},
 	},
-	ts_ls = {
-		disable_formatting = false,
-	},
+	ts_ls = {},
 	dockerls = {},
 }
 
@@ -54,16 +52,16 @@ function M.setup(_)
 		require("plugins.lsp.keymaps").on_attach(client, buffer)
 	end)
 
-	-- Setup each server individually to avoid mason-lspconfig issues
-	local lspconfig = require("lspconfig")
 	local capabilities = lsp_capabilities()
 
+	-- Use new vim.lsp.config API for Neovim 0.11+
 	for server_name, server_config in pairs(servers) do
 		local opts = vim.tbl_deep_extend("force", {
 			capabilities = capabilities,
 		}, server_config)
 
-		lspconfig[server_name].setup(opts)
+		vim.lsp.config[server_name] = opts
+		vim.lsp.enable(server_name)
 	end
 end
 
