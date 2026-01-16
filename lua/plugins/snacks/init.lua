@@ -18,7 +18,7 @@ return {
             },
         },
         words = { enabled = true },
-        scroll = { enabled = true },
+        scroll = { enabled = false },
     },
     keys = {
         -- { "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
