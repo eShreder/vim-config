@@ -12,7 +12,7 @@ function M.version()
 end
 
 function M.is_win()
-    if vim.loop.os_uname().version:match("Windows") then
+    if vim.uv.os_uname().version:match("Windows") then
         return true
     else
         return false
